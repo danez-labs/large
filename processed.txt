@@ -1,0 +1,1135 @@
+Statistical profiling result from isolate-0x160028000-97288-v8.log, (2132 ticks, 26 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     47    2.2%          /usr/lib/system/libsystem_pthread.dylib
+     46    2.2%          /usr/lib/system/libsystem_c.dylib
+     38    1.8%          /usr/lib/system/libsystem_malloc.dylib
+     19    0.9%          /usr/lib/libc++.1.dylib
+      5    0.2%          /usr/lib/system/libsystem_platform.dylib
+      1    0.0%          /usr/lib/system/libsystem_kernel.dylib
+      1    0.0%          /usr/lib/libobjc.A.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      5    0.2%    0.3%  LazyCompile: *normalizeString node:path:66:25
+      4    0.2%    0.2%  LazyCompile: *resolve node:path:1091:10
+      2    0.1%    0.1%  Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1    0.0%    0.1%  RegExp: ^_|^(internal|v8|node-inspect)\/|\/
+      1    0.0%    0.1%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    0.1%  RegExp: (^|\\|\/)((\.|%2e)(\.|%2e)?|(n|%6e|%4e)(o|%6f|%4f)(d|%64|%44)(e|%65|%45)(_|%5f)(m|%6d|%4d)(o|%6f|%4f)(d|%64|%44)(u|%75|%55)(l|%6c|%4c)(e|%65|%45)(s|%73|%53))(\\|\/|$)
+      1    0.0%    0.1%  RegExp: (?:^|\/)\.?\.$
+      1    0.0%    0.1%  LazyCompile: *realpathSync node:fs:2474:22
+      1    0.0%    0.1%  LazyCompile: *readFileSync node:fs:464:22
+      1    0.0%    0.1%  LazyCompile: *getPathFromURLPosix node:internal/url:1464:29
+      1    0.0%    0.1%  LazyCompile: *get href node:internal/url:753:11
+      1    0.0%    0.1%  LazyCompile: *dirname node:path:1275:10
+      1    0.0%    0.1%  LazyCompile: *compileFunction node:vm:316:25
+      1    0.0%    0.1%  LazyCompile: *basename node:path:1306:11
+      1    0.0%    0.1%  Function: wasm-function[2602]
+      1    0.0%    0.1%  Function: wasm-function[2588]
+      1    0.0%    0.1%  Function: wasm-function[2422]
+      1    0.0%    0.1%  Function: ^trySelfParentPath node:internal/modules/cjs/loader:438:27
+      1    0.0%    0.1%  Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1    0.0%    0.1%  Function: ^extname node:path:1385:10
+      1    0.0%    0.1%  Function: ^emit node:domain:471:44
+      1    0.0%    0.1%  Function: ^addJobsToDependencyGraph node:internal/modules/esm/module_job:107:38
+      1    0.0%    0.1%  Function: ^ExportedTokenType /Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/zip-it-and-ship-it/node_modules/@babel/parser/lib/index.js:949:14
+      1    0.0%    0.1%  Function: *wasm-function[15]
+
+ [C++]:
+   ticks  total  nonlib   name
+   1016   47.7%   51.4%  T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+    574   26.9%   29.1%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     59    2.8%    3.0%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     47    2.2%    2.4%  T __kernelrpc_mach_port_move_member_trap
+     39    1.8%    2.0%  T _posix_spawnattr_setflags
+     37    1.7%    1.9%  T _sigprocmask
+     28    1.3%    1.4%  T _mach_timebase_info_trap
+     17    0.8%    0.9%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+     15    0.7%    0.8%  T _task_get_exception_ports
+     14    0.7%    0.7%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+     13    0.6%    0.7%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+     10    0.5%    0.5%  t ___pfz_setup
+      5    0.2%    0.3%  T _mach_msg_overwrite_trap
+      4    0.2%    0.2%  T _task_restartable_ranges_register
+      4    0.2%    0.2%  T _mach_port_insert_right
+      4    0.2%    0.2%  T ___libplatform_init
+      3    0.1%    0.2%  T node::binding::DLOpen(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.1%    0.2%  T _mach_port_insert_member
+      3    0.1%    0.2%  T __kernelrpc_mach_port_get_refs
+      2    0.1%    0.1%  t void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+      2    0.1%    0.1%  t __os_nospin_lock_lock_slow
+      2    0.1%    0.1%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  T _host_get_special_port
+      1    0.0%    0.1%  t std::__1::deque<unsigned long, std::__1::allocator<unsigned long> >::__add_back_capacity()
+      1    0.0%    0.1%  t std::__1::__hash_table<unsigned long, std::__1::hash<unsigned long>, std::__1::equal_to<unsigned long>, std::__1::allocator<unsigned long> >::remove(std::__1::__hash_const_iterator<std::__1::__hash_node<unsigned long, void*>*>)
+      1    0.0%    0.1%  t std::__1::__hash_table<unsigned int, std::__1::hash<unsigned int>, std::__1::equal_to<unsigned int>, std::__1::allocator<unsigned int> >::__rehash(unsigned long)
+      1    0.0%    0.1%  t node::EnvEnumerator(v8::PropertyCallbackInfo<v8::Array> const&)
+      1    0.0%    0.1%  t node::AsyncHooks::pop_async_context(double)
+      1    0.0%    0.1%  t __os_once_gate_wait
+      1    0.0%    0.1%  t __os_nospin_lock_unlock_slow
+      1    0.0%    0.1%  T node::loader::ModuleWrap::SetSyntheticExport(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.1%  T node::loader::ModuleWrap::Instantiate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.1%  T node::contextify::ContextifyContext::MakeContext(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.1%  T node::InternalCallbackScope::InternalCallbackScope(node::Environment*, v8::Local<v8::Object>, node::async_context const&, int)
+      1    0.0%    0.1%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.1%  T _os_unfair_recursive_lock_lock_with_options
+      1    0.0%    0.1%  T _connect$NOCANCEL
+
+ [Summary]:
+   ticks  total  nonlib   name
+     32    1.5%    1.6%  JavaScript
+   1917   89.9%   97.1%  C++
+     31    1.5%    1.6%  GC
+    157    7.4%          Shared libraries
+     26    1.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    998   54.0%   46.8%  T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+    574   31.1%   26.9%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     59    3.2%    2.8%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     46    2.5%    2.2%  T __kernelrpc_mach_port_move_member_trap
+     28    1.5%    1.3%  T _mach_timebase_info_trap
+     26    1.4%    1.2%  T _sigprocmask
+     17    0.9%    0.8%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+     15    0.8%    0.7%  T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+     15    0.8%    0.7%  T _task_get_exception_ports
+     13    0.7%    0.6%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+     11    0.6%    0.5%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+     10    0.5%    0.5%  t ___pfz_setup
+      5    0.3%    0.2%  T node::loader::ModuleWrap::Link(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    0.3%    0.2%  T _mach_msg_overwrite_trap
+      3    0.2%    0.1%  T node::binding::DLOpen(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  t void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+      2    0.1%    0.1%  t __os_nospin_lock_lock_slow
+      2    0.1%    0.1%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  T _host_get_special_port
+      2    0.1%    0.1%  T __kernelrpc_mach_port_get_refs
+      2    0.1%    0.1%  T ___libplatform_init
+      1    0.1%    0.0%  t std::__1::deque<unsigned long, std::__1::allocator<unsigned long> >::__add_back_capacity()
+      1    0.1%    0.0%  t node::EnvEnumerator(v8::PropertyCallbackInfo<v8::Array> const&)
+      1    0.1%    0.0%  t __os_nospin_lock_unlock_slow
+      1    0.1%    0.0%  T node::loader::ModuleWrap::SetSyntheticExport(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.0%  T node::loader::ModuleWrap::Instantiate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.0%  T node::contextify::ContextifyContext::MakeContext(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.0%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.0%  T _os_unfair_recursive_lock_lock_with_options
+      1    0.1%    0.0%  T _mach_port_insert_member
+      1    0.1%    0.0%  T _connect$NOCANCEL
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1016   47.7%  T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+    219   21.6%    Function: ^readSync node:fs:704:18
+    165   75.3%      Function: ^tryReadSync node:fs:443:21
+    165  100.0%        Function: ^readFileSync node:fs:464:22
+    157   95.2%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+    157  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      7    4.2%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      5   71.4%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      2   28.6%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:986:33
+     54   24.7%      LazyCompile: *readFileSync node:fs:464:22
+     51   94.4%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+     50   98.0%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+     50  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1    2.0%          LazyCompile: *Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            LazyCompile: *Module.require node:internal/modules/cjs/loader:1014:36
+      1    1.9%        LazyCompile: ~shell_read /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:85:39
+      1  100.0%          LazyCompile: ~readBinary /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:94:45
+      1  100.0%            LazyCompile: ~getBinary /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:1635:21
+      1    1.9%        LazyCompile: ~get all /Users/danieltschinder/Projects/tests/large_project/node_modules/configstore/index.js:32:9
+      1  100.0%          LazyCompile: ~Configstore /Users/danieltschinder/Projects/tests/large_project/node_modules/configstore/index.js:17:13
+      1  100.0%            LazyCompile: ~UpdateNotifier /Users/danieltschinder/Projects/tests/large_project/node_modules/update-notifier/index.js:24:13
+      1    1.9%        LazyCompile: ~cjsPreparseModuleExports node:internal/modules/esm/translators:194:34
+      1  100.0%          LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:148:60
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+    116   11.4%    Function: ^read node:internal/modules/package_json_reader:16:14
+     93   80.2%      Function: ^readPackage node:internal/modules/cjs/loader:301:21
+     60   64.5%        Function: ^resolveExports node:internal/modules/cjs/loader:483:24
+     60  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+     60  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+     32   34.4%        LazyCompile: *Module._findPath node:internal/modules/cjs/loader:505:28
+     27   84.4%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+     27  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      5   15.6%          LazyCompile: *Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      4   80.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1   20.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:771:24
+      1    1.1%        LazyCompile: ~resolveExports node:internal/modules/cjs/loader:483:24
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+     14   12.1%      Function: ^getPackageConfig node:internal/modules/esm/resolve:172:26
+     14  100.0%        Function: ^packageResolve node:internal/modules/esm/resolve:853:24
+     14  100.0%          Function: ^moduleResolve node:internal/modules/esm/resolve:943:23
+     14  100.0%            Function: ^defaultResolve node:internal/modules/esm/resolve:1083:30
+      7    6.0%      LazyCompile: *readPackage node:internal/modules/cjs/loader:301:21
+      7  100.0%        Function: ^resolveExports node:internal/modules/cjs/loader:483:24
+      7  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      7  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      2    1.7%      LazyCompile: ~getPackageConfig node:internal/modules/esm/resolve:172:26
+      1   50.0%        LazyCompile: ~packageResolve node:internal/modules/esm/resolve:853:24
+      1  100.0%          LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:943:23
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1083:30
+      1   50.0%        Function: ^packageResolve node:internal/modules/esm/resolve:853:24
+      1  100.0%          LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:943:23
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1083:30
+     67    6.6%    LazyCompile: *compileFunction node:vm:316:25
+     48   71.6%      Function: ^wrapSafe node:internal/modules/cjs/loader:1034:18
+     48  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+     48  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+     48  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+     19   28.4%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1074:37
+     19  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+     18   94.7%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+     18  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1    5.3%          LazyCompile: *Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            LazyCompile: *Module.require node:internal/modules/cjs/loader:1014:36
+     65    6.4%    T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      5    7.7%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      2   40.0%        Function: ^readPackage node:internal/modules/cjs/loader:301:21
+      1   50.0%          Function: ^resolveExports node:internal/modules/cjs/loader:483:24
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1   50.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:332:26
+      1  100.0%            Function: ^trySelf node:internal/modules/cjs/loader:452:17
+      1   20.0%        LazyCompile: ~SafeSet node:internal/per_context/primordials:379:16
+      1  100.0%          Function: ~<anonymous> node:internal/fs/rimraf:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1   20.0%        Function: ^has node:internal/modules/esm/module_map:37:6
+      1  100.0%          Function: ^resolve node:internal/modules/esm/loader:799:16
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1   20.0%        Function: ^getPackageConfig node:internal/modules/esm/resolve:172:26
+      1  100.0%          Function: ^getPackageScopeConfig node:internal/modules/esm/resolve:228:31
+      1  100.0%            Function: ^getPackageType node:internal/modules/esm/resolve:804:24
+      5    7.7%      LazyCompile: ~_normalizeIPv6 /Users/danieltschinder/Projects/tests/large_project/node_modules/uri-js/dist/es5/uri.all.js:811:24
+      3   60.0%        LazyCompile: ~parse /Users/danieltschinder/Projects/tests/large_project/node_modules/uri-js/dist/es5/uri.all.js:868:15
+      3  100.0%          LazyCompile: ~getFullPath /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/compile/resolve.js:71:21
+      3  100.0%            LazyCompile: ~getSchemaRefs /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/compile/resolve.js:94:23
+      2   40.0%        LazyCompile: ~_recomposeAuthority /Users/danieltschinder/Projects/tests/large_project/node_modules/uri-js/dist/es5/uri.all.js:951:29
+      2  100.0%          LazyCompile: ~serialize /Users/danieltschinder/Projects/tests/large_project/node_modules/uri-js/dist/es5/uri.all.js:1001:19
+      2  100.0%            LazyCompile: ~_getFullPath /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/compile/resolve.js:78:22
+      4    6.2%      Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      4  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      4  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      4  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1014:36
+      3    4.6%      LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:474:36
+      3  100.0%        LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:542:30
+      2   66.7%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:542:30
+      2  100.0%            LazyCompile: ~packageExportsResolve node:internal/modules/esm/resolve:648:31
+      1   33.3%          LazyCompile: ~packageExportsResolve node:internal/modules/esm/resolve:648:31
+      1  100.0%            LazyCompile: ~packageResolve node:internal/modules/esm/resolve:853:24
+      3    4.6%      LazyCompile: *stat node:internal/modules/cjs/loader:151:14
+      2   66.7%        Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      2  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1   33.3%        Function: ^tryFile node:internal/modules/cjs/loader:395:17
+      1  100.0%          Function: ^tryPackage node:internal/modules/cjs/loader:349:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      2    3.1%      LazyCompile: ~serialize /Users/danieltschinder/Projects/tests/large_project/node_modules/uri-js/dist/es5/uri.all.js:1001:19
+      2  100.0%        LazyCompile: ~_getFullPath /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/compile/resolve.js:78:22
+      2  100.0%          LazyCompile: ~getFullPath /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/compile/resolve.js:71:21
+      2  100.0%            LazyCompile: ~getSchemaRefs /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/compile/resolve.js:94:23
+      2    3.1%      LazyCompile: *realpathSync node:fs:2474:22
+      2  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:404:20
+      2  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:395:17
+      2  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:411:23
+      1    1.5%      LazyCompile: ~unicodeWords /Users/danieltschinder/Projects/tests/large_project/node_modules/lodash.camelcase/index.js:283:22
+      1  100.0%        LazyCompile: ~words /Users/danieltschinder/Projects/tests/large_project/node_modules/lodash.camelcase/index.js:589:15
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/lodash.camelcase/index.js:404:18
+      1  100.0%            LazyCompile: ~getRequestParam file:///Users/danieltschinder/Projects/tests/large_project/node_modules/netlify/src/methods/params.js:8:34
+      1    1.5%      LazyCompile: ~tryParseComponents /Users/danieltschinder/Projects/tests/large_project/node_modules/typescript/lib/typescript.js:3354:32
+      1  100.0%        LazyCompile: ~Version /Users/danieltschinder/Projects/tests/large_project/node_modules/typescript/lib/typescript.js:3285:25
+      1  100.0%          LazyCompile: ~tryGetNodePerformanceHooks /Users/danieltschinder/Projects/tests/large_project/node_modules/typescript/lib/typescript.js:3645:40
+      1  100.0%            Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/typescript/lib/typescript.js:3619:11
+      1    1.5%      LazyCompile: ~translatePeerCertificate node:_tls_common:125:34
+      1  100.0%        LazyCompile: ~translatePeerCertificate node:_tls_common:125:34
+      1  100.0%          LazyCompile: ~translatePeerCertificate node:_tls_common:125:34
+      1  100.0%            LazyCompile: ~translatePeerCertificate node:_tls_common:125:34
+      1    1.5%      LazyCompile: ~replaceTilde /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/range.js:260:22
+      1  100.0%        Function: ^<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/range.js:256:32
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            Function: ^replaceTildes /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/range.js:255:23
+      1    1.5%      LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.5%      LazyCompile: ~parseRange /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/range.js:79:14
+      1  100.0%        LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/range.js:34:12
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            LazyCompile: ~Range /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/range.js:3:15
+      1    1.5%      LazyCompile: ~normalizeString node:path:66:25
+      1  100.0%        LazyCompile: ~resolve node:path:1091:10
+      1  100.0%          LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:104:28
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:31:36
+      1    1.5%      LazyCompile: ~multiMapAdd /Users/danieltschinder/Projects/tests/large_project/node_modules/typescript/lib/typescript.js:1642:25
+      1  100.0%        LazyCompile: ~registerCodeFix /Users/danieltschinder/Projects/tests/large_project/node_modules/typescript/lib/typescript.js:150137:33
+      1  100.0%          Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/typescript/lib/typescript.js:157575:15
+      1  100.0%            Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/typescript/lib/typescript.js:157573:11
+      1    1.5%      LazyCompile: ~module.exports /Users/danieltschinder/Projects/tests/large_project/node_modules/colors/lib/system/has-flag.js:27:26
+      1  100.0%        Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/colors/lib/system/supports-colors.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1    1.5%      LazyCompile: ~isValidPath /Users/danieltschinder/Projects/tests/large_project/node_modules/configstore/node_modules/dot-prop/index.js:10:21
+      1  100.0%        LazyCompile: ~getPathSegments /Users/danieltschinder/Projects/tests/large_project/node_modules/configstore/node_modules/dot-prop/index.js:12:25
+      1  100.0%          LazyCompile: ~get /Users/danieltschinder/Projects/tests/large_project/node_modules/configstore/node_modules/dot-prop/index.js:35:5
+      1  100.0%            LazyCompile: ~get /Users/danieltschinder/Projects/tests/large_project/node_modules/configstore/index.js:76:5
+      1    1.5%      LazyCompile: ~isIPv6 node:internal/net:35:16
+      1  100.0%        LazyCompile: ~isIP node:internal/net:39:14
+      1  100.0%          LazyCompile: ~lookupAndConnect node:net:1075:26
+      1  100.0%            LazyCompile: ~Socket.connect node:net:1017:36
+      1    1.5%      LazyCompile: ~isFileType node:fs:218:20
+      1  100.0%        LazyCompile: ~realpathSync node:fs:2474:22
+      1  100.0%          LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1    1.5%      LazyCompile: ~hasAlias /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/node_modules/execa/lib/stdio.js:4:18
+      1  100.0%        LazyCompile: ~normalizeStdio /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/node_modules/execa/lib/stdio.js:6:24
+      1  100.0%          LazyCompile: ~handleArguments /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/node_modules/execa/index.js:27:25
+      1  100.0%            LazyCompile: ~execa /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/node_modules/execa/index.js:74:15
+      1    1.5%      LazyCompile: ~getInverseObj /Users/danieltschinder/Projects/tests/large_project/node_modules/entities/lib/encode.js:40:23
+      1  100.0%        Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/entities/lib/encode.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1    1.5%      LazyCompile: ~getDuration /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/src/commands/base-command.js:59:30
+      1  100.0%        LazyCompile: ~onEnd /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/src/commands/base-command.js:298:14
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/bin/run:30:11
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    1.5%      LazyCompile: ~demangleAll /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:1059:21
+      1  100.0%        LazyCompile: ~ErrnoError /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:4558:44
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:4578:46
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    1.5%      LazyCompile: ~checkServerIdentity node:tls:280:59
+      1  100.0%        LazyCompile: ~onConnectSecure node:_tls_wrap:1520:25
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            Function: ^emit node:domain:471:44
+      1    1.5%      LazyCompile: ~_normalizeIPv4 /Users/danieltschinder/Projects/tests/large_project/node_modules/uri-js/dist/es5/uri.all.js:799:24
+      1  100.0%        LazyCompile: ~parse /Users/danieltschinder/Projects/tests/large_project/node_modules/uri-js/dist/es5/uri.all.js:868:15
+      1  100.0%          LazyCompile: ~getFullPath /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/compile/resolve.js:71:21
+      1  100.0%            LazyCompile: ~getSchemaRefs /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/compile/resolve.js:94:23
+      1    1.5%      LazyCompile: ~SemVer /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/semver.js:8:15
+      1  100.0%        LazyCompile: ~parse /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/comparator.js:33:9
+      1  100.0%          LazyCompile: ~Comparator /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/comparator.js:8:15
+      1  100.0%            LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/range.js:133:39
+      1    1.5%      LazyCompile: ~Range /Users/danieltschinder/Projects/tests/large_project/node_modules/make-dir/node_modules/semver/semver.js:885:16
+      1  100.0%        LazyCompile: ~satisfies /Users/danieltschinder/Projects/tests/large_project/node_modules/make-dir/node_modules/semver/semver.js:1334:20
+      1  100.0%          Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/make-dir/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1    1.5%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%        LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%          LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.5%      LazyCompile: ~FastBuffer node:internal/buffer:958:14
+      1  100.0%        LazyCompile: ~createUnsafeBuffer node:internal/buffer:1059:28
+      1  100.0%          LazyCompile: ~allocate node:buffer:403:18
+      1  100.0%            LazyCompile: ~allocUnsafe node:buffer:378:42
+      1    1.5%      LazyCompile: *readPackageScope node:internal/modules/cjs/loader:332:26
+      1  100.0%        LazyCompile: *Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            LazyCompile: *Module.require node:internal/modules/cjs/loader:1014:36
+      1    1.5%      LazyCompile: *getPathFromURLPosix node:internal/url:1464:29
+      1  100.0%        Function: ^fileURLToPath node:internal/url:1482:23
+      1  100.0%          Function: ^finalizeResolution node:internal/modules/esm/resolve:371:28
+      1  100.0%            Function: ^moduleResolve node:internal/modules/esm/resolve:943:23
+      1    1.5%      LazyCompile: *Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1014:36
+      1    1.5%      Function: ~<anonymous> node:internal/net:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            Function: ~<anonymous> node:net:1:1
+      1    1.5%      Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:497:29
+      1    1.5%      Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/src/lib/functions/runtimes/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1    1.5%      Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/lodash/_baseIsNative.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1    1.5%      Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/@typescript-eslint/typescript-estree/dist/create-program/createIsolatedProgram.js:2:83
+      1  100.0%        LazyCompile: ~__importStar /Users/danieltschinder/Projects/tests/large_project/node_modules/@typescript-eslint/typescript-estree/dist/create-program/createIsolatedProgram.js:18:60
+      1  100.0%          Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/@typescript-eslint/typescript-estree/dist/create-program/createIsolatedProgram.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1    1.5%      Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/@babel/parser/lib/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1    1.5%      Function: ^stat node:internal/modules/cjs/loader:151:14
+      1  100.0%        Function: ^tryFile node:internal/modules/cjs/loader:395:17
+      1  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:411:23
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1    1.5%      Function: ^replaceGTE0 /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/range.js:442:21
+      1  100.0%        Function: ^<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/range.js:118:12
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            Function: ^parseRange /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/range.js:79:14
+      1    1.5%      Function: ^readPackage node:internal/modules/cjs/loader:301:21
+      1  100.0%        Function: ^readPackageScope node:internal/modules/cjs/loader:332:26
+      1  100.0%          Function: ^trySelf node:internal/modules/cjs/loader:452:17
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1    1.5%      Function: ^read node:internal/modules/package_json_reader:16:14
+      1  100.0%        Function: ^readPackage node:internal/modules/cjs/loader:301:21
+      1  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:332:26
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1    1.5%      Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1014:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    1.5%      Function: ^canBeRequiredByUsers node:internal/bootstrap/loaders:247:30
+      1  100.0%        Function: ^packageResolve node:internal/modules/esm/resolve:853:24
+      1  100.0%          Function: ^moduleResolve node:internal/modules/esm/resolve:943:23
+      1  100.0%            Function: ^defaultResolve node:internal/modules/esm/resolve:1083:30
+      1    1.5%      Function: ^addOption /Users/danieltschinder/Projects/tests/large_project/node_modules/commander/lib/command.js:509:12
+      1  100.0%        Function: ^_optionEx /Users/danieltschinder/Projects/tests/large_project/node_modules/commander/lib/command.js:584:12
+      1  100.0%          Function: ^option /Users/danieltschinder/Projects/tests/large_project/node_modules/commander/lib/command.js:657:9
+      1  100.0%            LazyCompile: ~createFunctionsInvokeCommand /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/src/commands/functions/functions-invoke.js:233:38
+      1    1.5%      Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:1014:36
+      1  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1  100.0%            Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/src/utils/deploy/deploy-site.js:1:1
+      1    1.5%      Function: ^FastBuffer node:internal/buffer:958:14
+      1  100.0%        Function: ^allocate node:buffer:403:18
+      1  100.0%          Function: ^allocUnsafe node:buffer:378:42
+      1  100.0%            Function: ^tryCreateBuffer node:fs:428:25
+     63    6.2%    Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     53   84.1%      Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+     14   26.4%        LazyCompile: ~lazyUndici node:internal/bootstrap/pre_execution:187:22
+     14  100.0%          LazyCompile: ~fetch node:internal/bootstrap/pre_execution:196:23
+     14  100.0%            LazyCompile: ~doNativeWasm /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:1673:24
+     12   22.6%        Function: ~<anonymous> node:repl:1:1
+     12  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     12  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      4    7.5%        Function: ~<anonymous> node:tls:1:1
+      4  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      3    5.7%        Function: ~<anonymous> node:http:1:1
+      3  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      2    3.8%        Function: ~<anonymous> node:internal/readline/emitKeypressEvents:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      2    3.8%        Function: ~<anonymous> node:child_process:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      2    3.8%        Function: ~<anonymous> node:_http_client:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    1.9%        LazyCompile: ~lazyWebCrypto node:crypto:125:23
+      1  100.0%          LazyCompile: ~get node:crypto:369:8
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    1.9%        LazyCompile: ~lazyLoadStreams node:fs:2907:25
+      1  100.0%          LazyCompile: ~get ReadStream node:fs:3050:17
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    1.9%        LazyCompile: ~get node:dns:439:8
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            LazyCompile: *syncExports node:internal/bootstrap/loaders:304:14
+      1    1.9%        Function: ~<anonymous> node:worker_threads:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1    1.9%        Function: ~<anonymous> node:tty:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    1.9%        Function: ~<anonymous> node:readline:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1    1.9%        Function: ~<anonymous> node:readline/promises:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    1.9%        Function: ~<anonymous> node:module:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1    1.9%        Function: ~<anonymous> node:internal/child_process:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    1.9%        Function: ~<anonymous> node:dns:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1    1.9%        Function: ~<anonymous> node:dgram:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    1.9%        Function: ~<anonymous> node:assert:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1    1.9%        Function: ~<anonymous> node:_http_outgoing:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    1.9%        Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      8   12.7%      Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      8  100.0%        Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      8  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      8  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1014:36
+      2    3.2%      LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1   50.0%        LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:1014:36
+      1   50.0%        Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1014:36
+     29    2.9%    Function: ^openSync node:fs:590:18
+     29  100.0%      Function: ^readFileSync node:fs:464:22
+     25   86.2%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+     25  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+     25  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      2    6.9%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      2  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      2    6.9%        Function: ^cjsPreparseModuleExports node:internal/modules/esm/translators:194:34
+      2  100.0%          Function: ^commonjsStrategy node:internal/modules/esm/translators:148:60
+      2  100.0%            Function: ^moduleProvider node:internal/modules/esm/loader:467:28
+     21    2.1%    Function: ^readPackage node:internal/modules/cjs/loader:301:21
+     13   61.9%      Function: ^resolveExports node:internal/modules/cjs/loader:483:24
+     13  100.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+     13  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+     13  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      6   28.6%      LazyCompile: *Module._findPath node:internal/modules/cjs/loader:505:28
+      4   66.7%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      4  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      4  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1014:36
+      2   33.3%        LazyCompile: *Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      2  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      2  100.0%            LazyCompile: *Module.require node:internal/modules/cjs/loader:1014:36
+      2    9.5%      Function: ^readPackageScope node:internal/modules/cjs/loader:332:26
+      2  100.0%        Function: ^trySelf node:internal/modules/cjs/loader:452:17
+      2  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+     18    1.8%    LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     15   83.3%      Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      3   20.0%        Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      3  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      2   13.3%        LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:497:29
+      2  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:31:36
+      2  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2   13.3%        Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      2   13.3%        Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      2  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    6.7%        LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:536:38
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:31:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    6.7%        Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    6.7%        Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    6.7%        Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    6.7%        Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    6.7%        Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      3   16.7%      LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      3  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+     14    1.4%    LazyCompile: ~configSecureContext node:internal/tls/secure-context:124:29
+     14  100.0%      LazyCompile: ~createSecureContext node:_tls_common:99:29
+     14  100.0%        LazyCompile: ~connect node:_tls_wrap:1601:35
+     14  100.0%          LazyCompile: ~createConnection node:https:118:26
+     14  100.0%            LazyCompile: ~createSocket node:_http_agent:319:53
+     14    1.4%    LazyCompile: ~TLSSocket.getPeerCertificate node:_tls_wrap:988:50
+     14  100.0%      LazyCompile: ~onConnectSecure node:_tls_wrap:1520:25
+     14  100.0%        Function: ^emit node:events:460:44
+     14  100.0%          Function: ^emit node:domain:471:44
+     14  100.0%            LazyCompile: ~TLSSocket._finishInit node:_tls_wrap:922:43
+
+    574   26.9%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    569   99.1%    Function: ^compileFunction node:vm:316:25
+    566   99.5%      Function: ^wrapSafe node:internal/modules/cjs/loader:1034:18
+    566  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+    565   99.8%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+    565  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+
+     59    2.8%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     59  100.0%    Function: ^moduleStrategy node:internal/modules/esm/translators:114:56
+     59  100.0%      Function: ^moduleProvider node:internal/modules/esm/loader:467:28
+     59  100.0%        T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+
+     47    2.2%  T __kernelrpc_mach_port_move_member_trap
+     33   70.2%    LazyCompile: *compileFunction node:vm:316:25
+     20   60.6%      Function: ^wrapSafe node:internal/modules/cjs/loader:1034:18
+     20  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+     20  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+     20  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+     13   39.4%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1074:37
+     13  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+     13  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+     13  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1    2.1%    T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        LazyCompile: ~fetch2 node:internal/deps/undici/undici:6212:26
+      1  100.0%          LazyCompile: ~fetch node:internal/deps/undici/undici:7051:44
+      1  100.0%            LazyCompile: ~fetch node:internal/bootstrap/pre_execution:196:23
+      1    2.1%    LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1034:18
+      1  100.0%      LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%          LazyCompile: ~Module.load node:internal/modules/cjs/loader:986:33
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      1    2.1%    LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:169:29
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:31:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.1%    LazyCompile: ~realpathSync node:fs:2474:22
+      1  100.0%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1    2.1%    LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:31:36
+      1  100.0%      Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.1%    LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1  100.0%      LazyCompile: ~getStdout node:internal/bootstrap/switches/is_main_thread:146:19
+      1  100.0%        T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%          Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%            Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1    2.1%    LazyCompile: ~buildFormatLocale /Users/danieltschinder/Projects/tests/large_project/node_modules/date-fns/locale/en/build_format_locale/index.js:3:28
+      1  100.0%      Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/date-fns/locale/en/index.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1    2.1%    LazyCompile: ~Gauge._computeTheme /Users/danieltschinder/Projects/tests/large_project/node_modules/gauge/index.js:85:42
+      1  100.0%      LazyCompile: ~Gauge /Users/danieltschinder/Projects/tests/large_project/node_modules/gauge/index.js:19:16
+      1  100.0%        Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/npmlog/log.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1    2.1%    LazyCompile: ~<anonymous> node:stream/promises:17:22
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        LazyCompile: ~pipeline node:stream/promises:16:18
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/execa/node_modules/get-stream/index.js:39:4
+      1  100.0%            LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/execa/node_modules/get-stream/index.js:29:20
+      1    2.1%    Function: ~<anonymous> node:domain:1:1
+      1  100.0%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%          Function: ~<anonymous> node:repl:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    2.1%    Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/supports-color/index.js:1:1
+      1  100.0%      LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%          LazyCompile: ~Module.load node:internal/modules/cjs/loader:986:33
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      1    2.1%    Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%      Function: ^read node:internal/modules/package_json_reader:16:14
+      1  100.0%        Function: ^readPackage node:internal/modules/cjs/loader:301:21
+      1  100.0%          Function: ^resolveExports node:internal/modules/cjs/loader:483:24
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1    2.1%    Function: ^arrayEach /Users/danieltschinder/Projects/tests/large_project/node_modules/lodash/lodash.js:525:21
+      1  100.0%      Function: ~runInContext /Users/danieltschinder/Projects/tests/large_project/node_modules/lodash/lodash.js:1448:44
+      1  100.0%        Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/lodash/lodash.js:9:11
+      1  100.0%          Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/lodash/lodash.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+
+     47    2.2%  /usr/lib/system/libsystem_pthread.dylib
+     23   48.9%    LazyCompile: *compileFunction node:vm:316:25
+     17   73.9%      Function: ^wrapSafe node:internal/modules/cjs/loader:1034:18
+     17  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+     17  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+     17  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      6   26.1%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1074:37
+      6  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      5   83.3%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      5  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1   16.7%          LazyCompile: *Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            LazyCompile: *Module.require node:internal/modules/cjs/loader:1014:36
+      4    8.5%    T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1   25.0%      LazyCompile: ~primordials.SafePromisePrototypeFinally node:internal/per_context/primordials:424:43
+      1  100.0%        LazyCompile: ~close node:internal/fs/promises:207:11
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/fs/promises:347:5
+      1   25.0%      LazyCompile: *Module._resolveLookupPaths node:internal/modules/cjs/loader:678:38
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            LazyCompile: *Module.require node:internal/modules/cjs/loader:1014:36
+      1   25.0%      Function: ~<anonymous> node:_tls_wrap:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            Function: ~<anonymous> node:tls:1:1
+      1   25.0%      Function: ^moduleStrategy node:internal/modules/esm/translators:114:56
+      1  100.0%        Function: ^moduleProvider node:internal/modules/esm/loader:467:28
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    2.1%    LazyCompile: ~tryStatSync node:internal/modules/esm/resolve:164:3
+      1  100.0%      LazyCompile: ~packageResolve node:internal/modules/esm/resolve:853:24
+      1  100.0%        LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:943:23
+      1  100.0%          LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1083:30
+      1  100.0%            LazyCompile: ~ObjectDefineProperty.__proto__ node:internal/modules/esm/loader:151:5
+      1    2.1%    LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%        LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%          LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.1%    LazyCompile: ~status /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/src/commands/status/status.js:14:16
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%          Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    2.1%    LazyCompile: ~setupFetch node:internal/bootstrap/pre_execution:180:20
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:31:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.1%    LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:104:28
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:31:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.1%    LazyCompile: ~open /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:4181:23
+      1  100.0%      LazyCompile: ~createStandardStreams /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:4522:40
+      1  100.0%        LazyCompile: ~init /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:4599:23
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:7721:44
+      1  100.0%            LazyCompile: ~callRuntimeCallbacks /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:1291:30
+      1    2.1%    LazyCompile: ~lazyMakeTransferable node:internal/abort_controller:69:30
+      1  100.0%      LazyCompile: ~createAbortSignal node:internal/abort_controller:277:27
+      1  100.0%        LazyCompile: ~AbortController node:internal/abort_controller:305:14
+      1  100.0%          LazyCompile: ~pipelineImpl node:internal/streams/pipeline:154:22
+      1  100.0%            LazyCompile: ~<anonymous> node:stream/promises:17:22
+      1    2.1%    LazyCompile: ~getFullConfig file:///Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/config/src/main.js:210:38
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    2.1%    LazyCompile: ~__extends /Users/danieltschinder/Projects/tests/large_project/node_modules/rxjs/internal/observable/race.js:9:21
+      1  100.0%      Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/rxjs/internal/observable/race.js:45:32
+      1  100.0%        Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/rxjs/internal/observable/race.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1    2.1%    LazyCompile: ~<anonymous> file:///Users/danieltschinder/Projects/tests/large_project/node_modules/netlify/node_modules/node-fetch/src/index.js:381:25
+      1  100.0%      Function: ^emit node:events:460:44
+      1  100.0%        Function: ^emit node:domain:471:44
+      1  100.0%          LazyCompile: ~parserOnIncomingClient node:_http_client:592:32
+      1  100.0%            LazyCompile: ~parserOnHeadersComplete node:_http_common:72:33
+      1    2.1%    LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/chalk/source/index.js:84:20
+      1  100.0%      Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/src/utils/command-helpers.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1    2.1%    LazyCompile: *nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%      LazyCompile: ~initCJSParse node:internal/modules/esm/translators:58:28
+      1  100.0%        LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:148:60
+      1  100.0%          Function: ^moduleProvider node:internal/modules/esm/loader:467:28
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    2.1%    Function: ~<anonymous> node:repl:1:1
+      1  100.0%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1    2.1%    Function: wasm-to-js:iiiii:
+      1  100.0%      Function: wasm-function[2681]
+      1  100.0%        Function: wasm-function[2679]
+      1  100.0%          Function: wasm-function[2678]
+      1  100.0%            Function: wasm-function[2677]
+      1    2.1%    Function: ^captureLargerStackTrace node:internal/errors:471:35
+      1  100.0%      Function: ^NodeError node:internal/errors:355:28
+      1  100.0%        LazyCompile: ~onParseError node:internal/url:563:22
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            LazyCompile: *URL node:internal/url:636:14
+
+     46    2.2%  /usr/lib/system/libsystem_c.dylib
+     29   63.0%    LazyCompile: *compileFunction node:vm:316:25
+     22   75.9%      Function: ^wrapSafe node:internal/modules/cjs/loader:1034:18
+     22  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+     22  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+     22  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      7   24.1%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1074:37
+      7  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      7  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      7  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      3    6.5%    T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1   33.3%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        LazyCompile: ~replaceCaret /Users/danieltschinder/Projects/tests/large_project/node_modules/jsonwebtoken/node_modules/semver/semver.js:1029:23
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/jsonwebtoken/node_modules/semver/semver.js:1024:48
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1   33.3%      LazyCompile: ~_checkForMissingMandatoryOptions /Users/danieltschinder/Projects/tests/large_project/node_modules/commander/lib/command.js:1331:35
+      1  100.0%        LazyCompile: ~_parseCommand /Users/danieltschinder/Projects/tests/large_project/node_modules/commander/lib/command.js:1221:16
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/commander/lib/command.js:1059:48
+      1  100.0%            LazyCompile: ~_chainOrCall /Users/danieltschinder/Projects/tests/large_project/node_modules/commander/lib/command.js:1152:15
+      1   33.3%      LazyCompile: ~Range.parseRange /Users/danieltschinder/Projects/tests/large_project/node_modules/jsonwebtoken/node_modules/semver/semver.js:891:39
+      1  100.0%        LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/jsonwebtoken/node_modules/semver/semver.js:866:53
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            LazyCompile: ~Range /Users/danieltschinder/Projects/tests/large_project/node_modules/jsonwebtoken/node_modules/semver/semver.js:835:16
+      1    2.2%    Script: ~<anonymous> file:///Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/cache-utils/node_modules/globby/index.js:1:1
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%          LazyCompile: ~run node:internal/modules/esm/module_job:188:12
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    2.2%    LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%        LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%          LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.2%    LazyCompile: ~setupFetch node:internal/bootstrap/pre_execution:180:20
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:31:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.2%    LazyCompile: ~promiseRejectHandler node:internal/process/promises:109:30
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%          LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1    2.2%    LazyCompile: ~parse /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/comparator.js:33:9
+      1  100.0%      Function: ^Comparator /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/comparator.js:8:15
+      1  100.0%        Function: ^<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/range.js:133:39
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            Function: ^parseRange /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/classes/range.js:79:14
+      1    2.2%    LazyCompile: ~loadConfig file:///Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/config/src/main.js:143:35
+      1  100.0%      LazyCompile: ~resolveConfig file:///Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/config/src/main.js:30:45
+      1  100.0%        T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    2.2%    LazyCompile: ~getRootLength /Users/danieltschinder/Projects/tests/large_project/node_modules/typescript/lib/typescript.js:7736:27
+      1  100.0%      LazyCompile: ~combinePaths /Users/danieltschinder/Projects/tests/large_project/node_modules/typescript/lib/typescript.js:7922:26
+      1  100.0%        Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/typescript/lib/typescript.js:42326:11
+      1  100.0%          Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/typescript/lib/typescript.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1    2.2%    LazyCompile: ~get url file:///Users/danieltschinder/Projects/tests/large_project/node_modules/netlify/node_modules/node-fetch/src/request.js:152:9
+      1  100.0%      LazyCompile: ~<anonymous> file:///Users/danieltschinder/Projects/tests/large_project/node_modules/netlify/node_modules/node-fetch/src/index.js:138:27
+      1  100.0%        Function: ^emit node:events:460:44
+      1  100.0%          Function: ^emit node:domain:471:44
+      1  100.0%            LazyCompile: ~parserOnIncomingClient node:_http_client:592:32
+      1    2.2%    LazyCompile: ~get node:internal/bootstrap/node:237:6
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        LazyCompile: ~getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%          LazyCompile: ~syncExports node:internal/bootstrap/loaders:304:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:290:15
+      1    2.2%    LazyCompile: ~assembleStyles file:///Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/build/node_modules/chalk/source/vendor/ansi-styles/index.js:9:24
+      1  100.0%      Script: ~<anonymous> file:///Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/build/node_modules/chalk/source/vendor/ansi-styles/index.js:1:1
+      1  100.0%        T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%          T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            LazyCompile: ~run node:internal/modules/esm/module_job:188:12
+      1    2.2%    LazyCompile: ~Writable /Users/danieltschinder/Projects/tests/large_project/node_modules/readable-stream/lib/_stream_writable.js:229:18
+      1  100.0%      LazyCompile: ~Duplex /Users/danieltschinder/Projects/tests/large_project/node_modules/readable-stream/lib/_stream_duplex.js:58:16
+      1  100.0%        LazyCompile: ~Transform /Users/danieltschinder/Projects/tests/large_project/node_modules/readable-stream/lib/_stream_transform.js:98:19
+      1  100.0%          LazyCompile: ~Logger /Users/danieltschinder/Projects/tests/large_project/node_modules/winston/lib/winston/logger.js:40:14
+      1  100.0%            LazyCompile: ~DerivedLogger /Users/danieltschinder/Projects/tests/large_project/node_modules/winston/lib/winston/create-logger.js:43:16
+      1    2.2%    Function: ~<anonymous> node:repl:1:1
+      1  100.0%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1    2.2%    Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%      LazyCompile: *compileFunction node:vm:316:25
+      1  100.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1034:18
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+
+     39    1.8%  T _posix_spawnattr_setflags
+
+     38    1.8%  /usr/lib/system/libsystem_malloc.dylib
+      9   23.7%    T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      2   22.2%      Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      2  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      2  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1014:36
+      1   11.1%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        Function: ^readPackage node:internal/modules/cjs/loader:301:21
+      1  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:332:26
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1   11.1%      LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/@bugsnag/node/dist/bugsnag.js:2758:52
+      1  100.0%        T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/@bugsnag/node/dist/bugsnag.js:1:332
+      1  100.0%            Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/@bugsnag/node/dist/bugsnag.js:1:10
+      1   11.1%      LazyCompile: *realpathSync node:fs:2474:22
+      1  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:395:17
+      1  100.0%            Function: ^tryPackage node:internal/modules/cjs/loader:349:20
+      1   11.1%      LazyCompile: *readPackageScope node:internal/modules/cjs/loader:332:26
+      1  100.0%        Function: ^trySelf node:internal/modules/cjs/loader:452:17
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1   11.1%      LazyCompile: *Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1014:36
+      1   11.1%      Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:1014:36
+      1  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1  100.0%            Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/tar-stream/index.js:1:1
+      1   11.1%      Function: ^FastBuffer node:internal/buffer:958:14
+      1  100.0%        Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1  100.0%          Function: ^createPool node:buffer:155:20
+      1  100.0%            Function: ^allocate node:buffer:403:18
+      3    7.9%    LazyCompile: *getPathFromURLPosix node:internal/url:1464:29
+      3  100.0%      Function: ^fileURLToPath node:internal/url:1482:23
+      2   66.7%        Function: ^getPackageScopeConfig node:internal/modules/esm/resolve:228:31
+      1   50.0%          Function: ^packageResolve node:internal/modules/esm/resolve:853:24
+      1  100.0%            Function: ^moduleResolve node:internal/modules/esm/resolve:943:23
+      1   50.0%          Function: ^getPackageType node:internal/modules/esm/resolve:804:24
+      1  100.0%            LazyCompile: ~getFileProtocolModuleFormat node:internal/modules/esm/get_format:55:37
+      1   33.3%        Function: ^finalizeResolution node:internal/modules/esm/resolve:371:28
+      1  100.0%          Function: ^moduleResolve node:internal/modules/esm/resolve:943:23
+      1  100.0%            Function: ^defaultResolve node:internal/modules/esm/resolve:1083:30
+      3    7.9%    LazyCompile: *URL node:internal/url:636:14
+      2   66.7%      LazyCompile: *URL node:internal/url:636:14
+      1   50.0%        Function: ^resolvePackageTargetString node:internal/modules/esm/resolve:474:36
+      1  100.0%          Function: ^resolvePackageTarget node:internal/modules/esm/resolve:542:30
+      1  100.0%            Function: ^packageExportsResolve node:internal/modules/esm/resolve:648:31
+      1   50.0%        Function: ^packageResolve node:internal/modules/esm/resolve:853:24
+      1  100.0%          Function: ^moduleResolve node:internal/modules/esm/resolve:943:23
+      1  100.0%            Function: ^defaultResolve node:internal/modules/esm/resolve:1083:30
+      1   33.3%      Function: ^validateArgs node:internal/modules/esm/loader:578:26
+      1  100.0%        LazyCompile: *ObjectDefineProperty.__proto__ node:internal/modules/esm/loader:151:5
+      1  100.0%          Function: ^load node:internal/modules/esm/loader:567:13
+      1  100.0%            Function: ^moduleProvider node:internal/modules/esm/loader:467:28
+      1    2.6%    Script: ~<anonymous> file:///Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/framework-info/build/frameworks.js:1:1
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%          LazyCompile: ~run node:internal/modules/esm/module_job:188:12
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    2.6%    LazyCompile: ~setProvider /Users/danieltschinder/Projects/tests/large_project/node_modules/http-proxy-middleware/dist/logger.js:65:16
+      1  100.0%      LazyCompile: ~Logger /Users/danieltschinder/Projects/tests/large_project/node_modules/http-proxy-middleware/dist/logger.js:32:16
+      1  100.0%        LazyCompile: ~getInstance /Users/danieltschinder/Projects/tests/large_project/node_modules/http-proxy-middleware/dist/logger.js:24:21
+      1  100.0%          Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/http-proxy-middleware/dist/config-factory.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1    2.6%    LazyCompile: ~parseParams node:internal/url:1092:21
+      1  100.0%      Function: ^initSearchParams node:internal/url:1082:26
+      1  100.0%        Function: ^onParseComplete node:internal/url:544:25
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            Function: ^URL node:internal/url:636:14
+      1    2.6%    LazyCompile: ~onend node:internal/streams/end-of-stream:106:17
+      1  100.0%      Function: ^emit node:events:460:44
+      1  100.0%        LazyCompile: ~emit node:domain:471:44
+      1  100.0%          LazyCompile: ~endReadableNT node:internal/streams/readable:1352:23
+      1  100.0%            LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1    2.6%    LazyCompile: ~getStdout node:internal/bootstrap/switches/is_main_thread:146:19
+      1  100.0%      LazyCompile: ~log /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/src/utils/command-helpers.js:155:13
+      1  100.0%        LazyCompile: ~status /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/src/commands/status/status.js:14:16
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    2.6%    LazyCompile: ~getFullConfig file:///Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/config/src/main.js:210:38
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    2.6%    LazyCompile: ~get node:_http_incoming:112:16
+      1  100.0%      LazyCompile: ~<anonymous> file:///Users/danieltschinder/Projects/tests/large_project/node_modules/netlify/node_modules/node-fetch/src/index.js:381:25
+      1  100.0%        Function: ^emit node:events:460:44
+      1  100.0%          Function: ^emit node:domain:471:44
+      1  100.0%            LazyCompile: ~parserOnIncomingClient node:_http_client:592:32
+      1    2.6%    LazyCompile: ~enqueue file:///Users/danieltschinder/Projects/tests/large_project/node_modules/yocto-queue/index.js:24:9
+      1  100.0%      LazyCompile: ~enqueue file:///Users/danieltschinder/Projects/tests/large_project/node_modules/p-limit/index.js:33:18
+      1  100.0%        LazyCompile: ~<anonymous> file:///Users/danieltschinder/Projects/tests/large_project/node_modules/p-limit/index.js:49:49
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            LazyCompile: ~generator file:///Users/danieltschinder/Projects/tests/large_project/node_modules/p-limit/index.js:49:20
+      1    2.6%    LazyCompile: ~createNode /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:2382:29
+      1  100.0%      LazyCompile: ~mknod /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:2559:26
+      1  100.0%        LazyCompile: ~mknod /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:3846:24
+      1  100.0%          LazyCompile: ~mkdev /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:3883:24
+      1  100.0%            LazyCompile: ~createDefaultDevices /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-redirector/lib/redirects.js:4462:39
+      1    2.6%    LazyCompile: ~createAbortSignal node:internal/abort_controller:277:27
+      1  100.0%      LazyCompile: ~AbortController node:internal/abort_controller:305:14
+      1  100.0%        LazyCompile: ~pipelineImpl node:internal/streams/pipeline:154:22
+      1  100.0%          LazyCompile: ~<anonymous> node:stream/promises:17:22
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    2.6%    LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/commander/lib/option.js:295:32
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        Function: ^camelcase /Users/danieltschinder/Projects/tests/large_project/node_modules/commander/lib/option.js:294:19
+      1  100.0%          Function: ^attributeName /Users/danieltschinder/Projects/tests/large_project/node_modules/commander/lib/option.js:209:16
+      1  100.0%            Function: ^addOption /Users/danieltschinder/Projects/tests/large_project/node_modules/commander/lib/command.js:509:12
+      1    2.6%    LazyCompile: *compileFunction node:vm:316:25
+      1  100.0%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1    2.6%    Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/download/index.js:1:1
+      1  100.0%      Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1    2.6%    Function: ^tryPackage node:internal/modules/cjs/loader:349:20
+      1  100.0%      Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1014:36
+      1    2.6%    Function: ^readPackage node:internal/modules/cjs/loader:301:21
+      1  100.0%      LazyCompile: *Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            LazyCompile: *Module.require node:internal/modules/cjs/loader:1014:36
+      1    2.6%    Function: ^captureLargerStackTrace node:internal/errors:471:35
+      1  100.0%      Function: ^NodeError node:internal/errors:355:28
+      1  100.0%        LazyCompile: ~onParseError node:internal/url:563:22
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            LazyCompile: *URL node:internal/url:636:14
+
+     37    1.7%  T _sigprocmask
+      7   18.9%    LazyCompile: *compileFunction node:vm:316:25
+      4   57.1%      Function: ^wrapSafe node:internal/modules/cjs/loader:1034:18
+      4  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      4  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      4  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      3   42.9%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1074:37
+      3  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      2   66.7%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1   33.3%          LazyCompile: *Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            LazyCompile: *Module.require node:internal/modules/cjs/loader:1014:36
+      1    2.7%    T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%      Script: ~<anonymous> file:///Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/plugins-list/index.js:1:1
+      1  100.0%        T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%          T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            LazyCompile: ~run node:internal/modules/esm/module_job:188:12
+      1    2.7%    LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:104:28
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:31:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.7%    LazyCompile: ~init /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/src/commands/base-command.js:400:13
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%          Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    2.7%    LazyCompile: ~finalizeResolution node:internal/modules/esm/resolve:371:28
+      1  100.0%      Function: ^moduleResolve node:internal/modules/esm/resolve:943:23
+      1  100.0%        LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1083:30
+      1  100.0%          Function: ^ObjectDefineProperty.__proto__ node:internal/modules/esm/loader:151:5
+      1  100.0%            Function: ^resolve node:internal/modules/esm/loader:799:16
+      1    2.7%    LazyCompile: ~dev /Users/danieltschinder/Projects/tests/large_project/node_modules/@dabh/diagnostics/node/development.js:12:38
+      1  100.0%      Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/winston/lib/winston/exception-handler.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1    2.7%    LazyCompile: ~assembleStyles /Users/danieltschinder/Projects/tests/large_project/node_modules/listr-verbose-renderer/node_modules/ansi-styles/index.js:19:24
+      1  100.0%      Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%          LazyCompile: *Module.require node:internal/modules/cjs/loader:1014:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    2.7%    LazyCompile: ~abortSignal node:internal/abort_controller:285:21
+      1  100.0%      LazyCompile: ~abort node:internal/abort_controller:320:8
+      1  100.0%        LazyCompile: ~finishImpl node:internal/streams/pipeline:189:22
+      1  100.0%          LazyCompile: ~finish node:internal/streams/pipeline:185:18
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/util:442:18
+      1    2.7%    LazyCompile: ~__extends /Users/danieltschinder/Projects/tests/large_project/node_modules/rxjs/internal/operators/takeWhile.js:9:21
+      1  100.0%      Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/rxjs/internal/operators/takeWhile.js:34:37
+      1  100.0%        Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/rxjs/internal/operators/takeWhile.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1    2.7%    LazyCompile: ~Readable.read node:internal/streams/readable:402:35
+      1  100.0%      Function: ^Socket.read node:net:700:33
+      1  100.0%        LazyCompile: ~afterConnect node:net:1199:22
+      1    2.7%    LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1179:39
+      1  100.0%      Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1014:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    2.7%    LazyCompile: ~HTTPError /Users/danieltschinder/Projects/tests/large_project/node_modules/micro-api-client/lib/index.js:55:21
+      1  100.0%      LazyCompile: ~JSONHTTPError /Users/danieltschinder/Projects/tests/large_project/node_modules/micro-api-client/lib/index.js:91:25
+      1  100.0%        LazyCompile: ~parseResponse file:///Users/danieltschinder/Projects/tests/large_project/node_modules/netlify/src/methods/response.js:5:45
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    2.7%    LazyCompile: ~<anonymous> node:internal/modules/esm/loader:538:15
+      1    2.7%    LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/prettyjson/lib/prettyjson.js:178:52
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        LazyCompile: ~renderToArray /Users/danieltschinder/Projects/tests/large_project/node_modules/prettyjson/lib/prettyjson.js:96:29
+      1  100.0%          LazyCompile: ~render /Users/danieltschinder/Projects/tests/large_project/node_modules/prettyjson/lib/prettyjson.js:229:33
+      1  100.0%            LazyCompile: ~status /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/src/commands/status/status.js:14:16
+      1    2.7%    LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/object-assign/index.js:50:53
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        LazyCompile: ~shouldUseNative /Users/danieltschinder/Projects/tests/large_project/node_modules/object-assign/index.js:21:25
+      1  100.0%          Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/object-assign/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1    2.7%    LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/deepmerge/dist/cjs.js:86:34
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        LazyCompile: ~mergeObject /Users/danieltschinder/Projects/tests/large_project/node_modules/deepmerge/dist/cjs.js:79:21
+      1  100.0%          LazyCompile: ~deepmerge /Users/danieltschinder/Projects/tests/large_project/node_modules/deepmerge/dist/cjs.js:100:19
+      1  100.0%            LazyCompile: ~cloneUnlessOtherwiseSpecified /Users/danieltschinder/Projects/tests/large_project/node_modules/deepmerge/dist/cjs.js:32:39
+      1    2.7%    LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/core.js:364:46
+      1  100.0%      T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%        LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/core.js:364:15
+      1  100.0%          LazyCompile: ~eachItem /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/compile/util.js:82:18
+      1  100.0%            LazyCompile: ~addKeyword /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/core.js:331:15
+      1    2.7%    LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/compile/resolve.js:103:41
+      1  100.0%      LazyCompile: ~_traverse /Users/danieltschinder/Projects/tests/large_project/node_modules/json-schema-traverse/index.js:67:19
+      1  100.0%        LazyCompile: ~_traverse /Users/danieltschinder/Projects/tests/large_project/node_modules/json-schema-traverse/index.js:67:19
+      1  100.0%          LazyCompile: ~module.exports /Users/danieltschinder/Projects/tests/large_project/node_modules/json-schema-traverse/index.js:3:42
+      1  100.0%            LazyCompile: ~getSchemaRefs /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/compile/resolve.js:94:23
+      1    2.7%    Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/compile/codegen/scope.js:1:1
+      1  100.0%      Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1    2.7%    Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/@typescript-eslint/typescript-estree/dist/create-program/createWatchProgram.js:1:1
+      1  100.0%      Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+
+     28    1.3%  T _mach_timebase_info_trap
+     28  100.0%    LazyCompile: *readSync node:fs:704:18
+     28  100.0%      Function: ^tryReadSync node:fs:443:21
+     28  100.0%        Function: ^readFileSync node:fs:464:22
+     26   92.9%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+     26  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      2    7.1%          Function: ^cjsPreparseModuleExports node:internal/modules/esm/translators:194:34
+      2  100.0%            Function: ^commonjsStrategy node:internal/modules/esm/translators:148:60
+
+     26    1.2%  UNKNOWN
+     12   46.2%    LazyCompile: *compileFunction node:vm:316:25
+      9   75.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1034:18
+      9  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      9  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      9  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      3   25.0%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1074:37
+      3  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      2   66.7%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1   33.3%          LazyCompile: *Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            LazyCompile: *Module.require node:internal/modules/cjs/loader:1014:36
+      1    3.8%    T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%      LazyCompile: ~findSignalByNumber /Users/danieltschinder/Projects/tests/large_project/node_modules/windows-release/node_modules/human-signals/build/src/main.js:60:34
+      1  100.0%        LazyCompile: ~getSignalByNumber /Users/danieltschinder/Projects/tests/large_project/node_modules/windows-release/node_modules/human-signals/build/src/main.js:37:33
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/windows-release/node_modules/human-signals/build/src/main.js:31:36
+      1  100.0%            T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1    3.8%    LazyCompile: ~value node:internal/console/constructor:230:20
+      1  100.0%      LazyCompile: ~initializeGlobalConsole node:internal/console/constructor:687:33
+      1  100.0%        LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:104:28
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:31:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.8%    LazyCompile: ~rng /Users/danieltschinder/Projects/tests/large_project/node_modules/uuid/dist/rng.js:16:13
+      1  100.0%      LazyCompile: ~v4 /Users/danieltschinder/Projects/tests/large_project/node_modules/uuid/dist/v4.js:14:12
+      1  100.0%        Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/netlify-cli/src/utils/get-global-config.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1    3.8%    LazyCompile: ~isTypedArray /Users/danieltschinder/Projects/tests/large_project/node_modules/is-typedarray/index.js:18:22
+      1  100.0%      LazyCompile: ~writeFileSync /Users/danieltschinder/Projects/tests/large_project/node_modules/write-file-atomic/index.js:172:24
+      1  100.0%        LazyCompile: ~set all /Users/danieltschinder/Projects/tests/large_project/node_modules/configstore/index.js:56:9
+      1  100.0%          T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%            LazyCompile: ~Configstore /Users/danieltschinder/Projects/tests/large_project/node_modules/configstore/index.js:17:13
+      1    3.8%    LazyCompile: ~isAccessorDescriptor /Users/danieltschinder/Projects/tests/large_project/node_modules/define-property/node_modules/is-accessor-descriptor/index.js:20:30
+      1  100.0%      LazyCompile: ~isDescriptor /Users/danieltschinder/Projects/tests/large_project/node_modules/define-property/node_modules/is-descriptor/index.js:14:39
+      1  100.0%        LazyCompile: ~defineProperty /Users/danieltschinder/Projects/tests/large_project/node_modules/define-property/index.js:12:41
+      1  100.0%          LazyCompile: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/static-extend/index.js:52:18
+      1  100.0%            Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/snapdragon/index.js:1:1
+      1    3.8%    LazyCompile: ~createToken /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/internal/re.js:11:21
+      1  100.0%      Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/semver/internal/re.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1    3.8%    LazyCompile: ~addQueryParams file:///Users/danieltschinder/Projects/tests/large_project/node_modules/netlify/src/methods/url.js:23:33
+      1  100.0%      LazyCompile: ~getUrl file:///Users/danieltschinder/Projects/tests/large_project/node_modules/netlify/src/methods/url.js:7:32
+      1  100.0%        LazyCompile: ~callMethod file:///Users/danieltschinder/Projects/tests/large_project/node_modules/netlify/src/methods/index.js:27:35
+      1  100.0%          LazyCompile: ~<anonymous> file:///Users/danieltschinder/Projects/tests/large_project/node_modules/netlify/src/methods/index.js:21:25
+      1  100.0%            LazyCompile: ~getEnvelope file:///Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/config/src/env/envelope.js:1:43
+      1    3.8%    LazyCompile: ~Ajv /Users/danieltschinder/Projects/tests/large_project/node_modules/ajv/dist/ajv.js:10:1
+      1  100.0%      Script: ~<anonymous> file:///Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/framework-info/src/plugins.js:1:1
+      1  100.0%        T node::fs::BindingData::MemoryInfo(node::MemoryTracker*) const
+      1  100.0%          T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            LazyCompile: ~run node:internal/modules/esm/module_job:188:12
+      1    3.8%    LazyCompile: *realpathSync node:fs:2474:22
+      1  100.0%      Function: ^toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%        Function: ^tryFile node:internal/modules/cjs/loader:395:17
+      1  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:411:23
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1    3.8%    Function: ~<anonymous> node:domain:1:1
+      1  100.0%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%          Function: ~<anonymous> node:repl:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    3.8%    Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/chardet/index.js:1:1
+      1  100.0%      Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1    3.8%    Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/@typescript-eslint/typescript-estree/dist/convert.js:2:83
+      1  100.0%      LazyCompile: ~__importStar /Users/danieltschinder/Projects/tests/large_project/node_modules/@typescript-eslint/typescript-estree/dist/convert.js:18:60
+      1  100.0%        Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/@typescript-eslint/typescript-estree/dist/convert.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1    3.8%    Function: ~<anonymous> /Users/danieltschinder/Projects/tests/large_project/node_modules/@netlify/zip-it-and-ship-it/dist/runtimes/node/bundlers/index.js:1:1
+      1  100.0%      Function: ^Module._compile node:internal/modules/cjs/loader:1074:37
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1129:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:986:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1    3.8%    Function: ^nextHookFactory node:internal/modules/esm/loader:117:25
+      1  100.0%      Function: ^load node:internal/modules/esm/loader:567:13
+      1  100.0%        Function: ^moduleProvider node:internal/modules/esm/loader:467:28
+      1  100.0%          Function: ^ModuleJob node:internal/modules/esm/module_job:53:14
+      1  100.0%            Function: ^#createModuleJob node:internal/modules/esm/loader:466:19
+
